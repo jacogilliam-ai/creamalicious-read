@@ -1046,6 +1046,94 @@ button { font-family: inherit; }
   }
 }
 
+/* Email preview card (Creamalicious sneak peek) */
+.email-preview-card {
+  background: #fff;
+  border: 1px solid rgba(184, 80, 31, 0.16);
+  border-radius: 8px;
+  margin: 40px auto 20px;
+  max-width: 600px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(42, 30, 21, 0.08);
+}
+.email-preview-meta {
+  padding: 20px 28px;
+  background: var(--cream-2);
+  border-bottom: 1px solid rgba(184, 80, 31, 0.14);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+.email-preview-meta p {
+  margin: 0 0 4px;
+}
+.email-preview-meta p:last-child { margin-bottom: 0; }
+.email-preview-meta strong {
+  color: var(--ink);
+  font-weight: 600;
+  margin-right: 4px;
+}
+.email-preview-body {
+  padding: 28px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.email-preview-body p {
+  margin: 0 0 14px;
+}
+.email-preview-body p:last-child { margin-bottom: 0; }
+.email-preview-body strong {
+  color: var(--green);
+  font-weight: 700;
+}
+.email-preview-cta {
+  color: var(--green) !important;
+  font-weight: 700;
+  padding: 12px 0;
+  text-align: center;
+}
+.email-preview-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Content ownership list */
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto 0;
+  max-width: 720px;
+}
+.content-list li {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  padding: 20px 0 20px 24px;
+  border-top: 1px solid rgba(184, 80, 31, 0.14);
+  position: relative;
+}
+.content-list li:first-child { border-top: none; }
+.content-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+}
+.content-list li:first-child::before { top: 10px; }
+.content-list strong {
+  color: var(--green);
+  font-weight: 700;
+}
+
 /* Flavor list showcase (Creamalicious) */
 .flavor-showcase {
   max-width: 900px;
