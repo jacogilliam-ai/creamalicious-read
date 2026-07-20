@@ -1046,7 +1046,7 @@ button { font-family: inherit; }
   }
 }
 
-/* Email preview card (Creamalicious sneak peek) */
+/* Email preview card (visual mockup) */
 .email-preview-card {
   background: #fff;
   border: 1px solid rgba(184, 80, 31, 0.16);
@@ -1054,44 +1054,204 @@ button { font-family: inherit; }
   margin: 40px auto 20px;
   max-width: 600px;
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(42, 30, 21, 0.08);
+  box-shadow: 0 20px 50px rgba(42, 30, 21, 0.12);
 }
 .email-preview-meta {
-  padding: 20px 28px;
-  background: var(--cream-2);
-  border-bottom: 1px solid rgba(184, 80, 31, 0.14);
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--ink-muted);
+  padding: 18px 24px;
+  background: #ececec;
+  border-bottom: 1px solid #d4d4d4;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #555;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-.email-preview-meta p {
-  margin: 0 0 4px;
-}
+.email-preview-meta p { margin: 0 0 2px; }
 .email-preview-meta p:last-child { margin-bottom: 0; }
 .email-preview-meta strong {
-  color: var(--ink);
+  color: #333;
   font-weight: 600;
+  display: inline-block;
+  min-width: 60px;
   margin-right: 4px;
 }
+.email-preview-header {
+  background: #ffffff;
+  padding: 24px 28px;
+  text-align: center;
+  border-bottom: 1px solid rgba(184, 80, 31, 0.12);
+}
+.email-preview-brand {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: -0.02em;
+  font-style: italic;
+}
+.email-preview-hero {
+  background: linear-gradient(135deg, #f6ead3 0%, #f0d9b8 100%);
+  padding: 44px 28px;
+  text-align: center;
+  color: #3a2412;
+}
+.email-preview-hero-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7a3a1a;
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+.email-preview-hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: #3a2412;
+  margin: 0 0 8px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.email-preview-hero-sub {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #6b3a1c;
+  margin: 0;
+  line-height: 1.5;
+}
 .email-preview-body {
-  padding: 28px;
-  color: var(--ink);
+  padding: 32px 28px;
+  color: #3a2412;
   font-size: 15px;
   line-height: 1.65;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-.email-preview-body p {
-  margin: 0 0 14px;
-}
+.email-preview-body p { margin: 0 0 14px; }
 .email-preview-body p:last-child { margin-bottom: 0; }
 .email-preview-body strong {
   color: var(--green);
   font-weight: 700;
 }
-.email-preview-cta {
-  color: var(--green) !important;
-  font-weight: 700;
-  padding: 12px 0;
+.email-preview-code {
+  background: #fbf4e2;
+  border: 1px dashed rgba(122, 58, 26, 0.35);
+  border-radius: 6px;
+  padding: 14px 16px;
   text-align: center;
+  font-size: 14px !important;
+  margin: 6px 0 20px !important;
+}
+.email-preview-btn {
+  display: block;
+  background: var(--green);
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  margin: 8px auto 0;
+  max-width: 240px;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.15s ease;
+}
+.email-preview-btn:hover { background: var(--green-deep, #0f4e2c); }
+.email-preview-products {
+  padding: 28px;
+  background: #fbf7ec;
+  border-top: 1px solid rgba(184, 80, 31, 0.08);
+  border-bottom: 1px solid rgba(184, 80, 31, 0.08);
+}
+.email-preview-products-heading {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--green);
+  text-align: center;
+  margin: 0 0 20px;
+  font-style: italic;
+}
+.email-preview-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.email-preview-pint { text-align: center; }
+.pint-svg svg {
+  width: 100%;
+  max-width: 90px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+.pint-name {
+  font-family: 'Fraunces', serif;
+  font-size: 13px;
+  color: #3a2412;
+  line-height: 1.35;
+  margin: 0;
+  font-weight: 500;
+}
+.email-preview-signature {
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+}
+.email-preview-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-deep, #0f4e2c) 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+.email-preview-signoff { line-height: 1.4; }
+.signoff-line {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #6b3a1c;
+  margin: 0 0 2px;
+}
+.signoff-name {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--green);
+  margin: 0 0 2px;
+}
+.signoff-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+.email-preview-footer {
+  background: #f0ebde;
+  padding: 18px 28px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--ink-muted);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+.email-preview-footer p { margin: 0; }
+.email-preview-footer a {
+  color: var(--ink-muted);
+  text-decoration: underline;
 }
 .email-preview-note {
   text-align: center;
@@ -1100,6 +1260,22 @@ button { font-family: inherit; }
   font-style: italic;
   margin: 0 auto;
   max-width: 600px;
+  line-height: 1.5;
+}
+@media (max-width: 480px) {
+  .email-preview-header { padding: 18px 20px; }
+  .email-preview-brand { font-size: 24px; }
+  .email-preview-hero { padding: 32px 20px; }
+  .email-preview-hero-title { font-size: 26px; }
+  .email-preview-body { padding: 24px 20px; }
+  .email-preview-products { padding: 22px 16px; }
+  .email-preview-product-grid { gap: 10px; }
+  .pint-name { font-size: 11px; }
+  .email-preview-signature { padding: 22px 20px; gap: 12px; }
+  .email-preview-avatar { width: 48px; height: 48px; font-size: 18px; }
+  .signoff-name { font-size: 15px; }
+  .email-preview-meta { padding: 14px 20px; }
+  .email-preview-meta strong { min-width: 52px; }
 }
 
 /* Content ownership list */
