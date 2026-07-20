@@ -970,6 +970,67 @@ button { font-family: inherit; }
   text-align: center;
 }
 
+/* Platform grid: WooCommerce vs Shopify tradeoff (Creamalicious) */
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  max-width: 1200px;
+  margin: 56px auto 0;
+  padding: 0 var(--section-pad-x);
+}
+.platform-col {
+  background: rgba(230, 165, 74, 0.06);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 6px;
+  padding: 32px;
+}
+.platform-kicker {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--accent-gold);
+  margin: 0 0 20px;
+  line-height: 1.25;
+}
+.platform-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.platform-col li {
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(244, 235, 216, 0.9);
+  padding: 10px 0 10px 20px;
+  position: relative;
+  border-top: 1px solid rgba(230, 165, 74, 0.16);
+}
+.platform-col li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+.platform-col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+}
+.platform-col li:first-child::before {
+  top: 8px;
+}
+@media (max-width: 900px) {
+  .platform-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 /* Flavor list showcase (Creamalicious) */
 .flavor-showcase {
   max-width: 900px;
