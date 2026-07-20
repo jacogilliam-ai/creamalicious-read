@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Full audit, Creamalicious</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jacogilliam-ai.github.io/creamalicious-read/audit.html" />
+  <meta property="og:title" content="Full audit, Creamalicious" />
+  <meta property="og:description" content="What jumped out across every page. Prepared for Chef Liz Rogers." />
+  <meta property="og:image" content="https://jacogilliam-ai.github.io/creamalicious-read/images/creamalicious-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+
+  <main id="site" class="site">
+
+    <!-- NAV -->
+    <nav class="nav">
+      <img src="images/creamalicious-logo.png" alt="Creamalicious" class="nav-logo" />
+      <div class="nav-links">
+        <a href="index.html">← Back to the main page</a>
+      </div>
+    </nav>
+
+    <!-- HERO (compressed) -->
+    <section class="section section-forest" style="padding-top: 120px;">
+      <div class="container container-narrow center-head">
+        <p class="eyebrow eyebrow-light">Full audit</p>
+        <h1 class="display-1 display-light">What jumped out across every page.</h1>
+        <p class="body-lg body-light">Twenty-five findings across six categories. Ranked by revenue and reputation impact. Snapshot in time as of the audit date.</p>
+      </div>
+    </section>
+
+    <!-- 1. CRITICAL -->
+    <section class="section section-cream">
+      <div class="container center-head">
+        <p class="eyebrow">01 / Critical</p>
+        <h2 class="display-1">Things shipped broken to production.</h2>
+        <p class="lead">Five items. High visibility, high urgency.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>The /shop/ page displays raw code instead of products.</h3>
+            <p>Visit socreamalicious.co/shop/ and the page loads a wall of unrendered WPBakery shortcodes ([vc_row], [nd_options_text], [woo_product_slider id="719"]). Site was originally built with WPBakery Page Builder, then switched to Elementor Pro. The shop page still holds the old shortcodes and nothing renders them. Every visitor who clicks "Shop" or types /shop/ sees a text wall.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>All products currently marked "Out of Stock."</h3>
+            <p>Every product page checked (Derby Day Bundle, Sweet Potato Pie, Pecan Pie, Strawberry Fixin') shows "Out of stock" with no purchase option and no price visible on the detail page. Whether the store is intentionally paused or WooCommerce inventory is misconfigured, direct-to-consumer sales through the site are impossible right now.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>Copywriter's editing note is LIVE on the homepage.</h3>
+            <p>Exact text visible on the homepage right now: <em>Guaranteed frozen delivery." (lets delete "Pints arrive in an insulated box with plenty of dry ice.</em> That parenthetical is a note-to-self from the person editing the copy. It never got deleted before publishing.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>Placeholder editing mark left in copy.</h3>
+            <p>The homepage shipping section reads: <em>We prepare your order *with love</em>. That asterisk is a leftover editing mark (probably meant as a note that a footnote was supposed to go there). Never got cleaned up.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">05</p>
+          <div class="audit-body">
+            <h3>Product images have AI-generated text failures on the labels.</h3>
+            <p>Product photography on the homepage was generated using Google Whisk (filenames literally start with thumbnail_Whisk_). AI generators struggle with rendering readable text, so the pint labels display things like "CHEF INBOSPIREB NIC IL ARTISANN IcE CREAM," "CUSF INEPIRED," "ARTIEER ICE CREAM," and "ARTIEAN ICE CROAM." Real pints don't say that. For a $9.99 premium tier brand, product mockups with fake AI text on the labels undercut the entire positioning.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. MISSING INFRASTRUCTURE -->
+    <section class="section section-cream-2">
+      <div class="container center-head">
+        <p class="eyebrow">02 / Missing infrastructure</p>
+        <h2 class="display-1">Nothing tracks. Nothing captures. Nothing measures.</h2>
+        <p class="lead">Five items. The site is a black box.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>ZERO analytics installed site-wide.</h3>
+            <p>No Google Analytics 4. No Google Tag Manager. No Meta Pixel. No TikTok Pixel. No Klaviyo tracking snippet. No HubSpot. Nothing. There is no way to know where visitors come from, no way to measure conversion, no way to build retargeting audiences, no way to attribute any current or future marketing effort to actual site outcomes. Every future ad campaign, every press feature, every viral Instagram moment currently has no way to be measured.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>NO email marketing platform integrated.</h3>
+            <p>The site has multiple email capture forms (popup + inline "Stay Connected" + "Join The Crew" + "Join Our Family" + "Holler at Us") collecting Name / Phone / Email, but no evidence of Klaviyo, Mailchimp, Constant Contact, ConvertKit, or any other email platform. Form submissions likely route to the WordPress database or admin email only. Every warm lead captured cools off in a static database. Zero welcome sequence. Zero post-purchase flow. Zero abandoned cart recovery.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>ZERO JSON-LD structured data across the entire site.</h3>
+            <p>No Product schema on any product page. No LocalBusiness schema. No Organization schema. No BreadcrumbList. No Article schema. No Recipe schema (despite being a food brand). Product pages will never be eligible for rich results. Google Shopping surfacing is at zero. AI answer engines like Perplexity, ChatGPT Search, and Claude have nothing structured to cite when someone asks about Creamalicious.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>ZERO Open Graph tags on any page.</h3>
+            <p>Not one page in the audit has og:title, og:description, og:image, og:type, og:site_name, or og:url. When anyone shares a Creamalicious URL on iMessage, WhatsApp, Slack, LinkedIn, Instagram Stories, X, or Discord, the link preview has NO image, NO title, NO description. Just the URL. For a visual food brand at premium price point, this is a huge missed opportunity every time someone shares a product link.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">05</p>
+          <div class="audit-body">
+            <h3>ZERO Twitter Card tags.</h3>
+            <p>Same problem as OG tags but for X/Twitter previews. Missing twitter:card, twitter:title, twitter:description, twitter:image, twitter:site.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. CONTENT AND BRAND -->
+    <section class="section section-cream">
+      <div class="container center-head">
+        <p class="eyebrow">03 / Content and brand consistency</p>
+        <h2 class="display-1">Copy, dates, alt text, filenames.</h2>
+        <p class="lead">Five items. Details that pile up.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>Products still labeled "COMING SOON JUNE 2026" after that date passed.</h3>
+            <p>Currently live on the site: (COMING SOON JUNE 2026) Granma Gigi Sweet Potato Pie, (COMING SOON JUNE 2026) Slap Yo' Momma Banana Pudding, (COMING SOON JUNE 2026) Uncle Charles Brown Suga Bourbon Cake. Either they launched (drop the label), they're delayed (update the date), or the timeline shifted (state the new date). Any is better than the current state.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>Contact page has a confused URL and title.</h3>
+            <p>Contact page title reads "Contact 1 – Creamalicious Online Store." Canonical URL is /contact-1/. Navigable URL is /contact/. The "1" suggests someone created a new page while keeping the old one around. URL bar shows /contact/, but the page title advertises "Contact 1." Inconsistent.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>Page titles use HTML entity for dashes.</h3>
+            <p>Every page title uses &#8211; (HTML entity for en-dash) rather than a Unicode character. Renders visually correctly in most browsers, but some social sharing tools and search result renderings display the literal entity, which reads as gibberish.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>Missing alt text on ALL homepage images.</h3>
+            <p>Every product image, hero image, "AS SEEN IN" logo, and content image on the homepage has an empty alt attribute. Accessibility impact: screen readers announce them as "image" with no context (WCAG 2.1 Level A violation). SEO impact: Google Image Search cannot index them properly.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">05</p>
+          <div class="audit-body">
+            <h3>Image filenames are unhelpful and revealing.</h3>
+            <p>Homepage image examples: thumbnail_Whisk_b5852b496992fd79bd6415054a85a934dr.jpg (AI tool + hash), Untitled-design-2025-11-07T144353.907.png (Canva default filename with timestamp), image-d410566a-bcf3-4cf0-8c01-18ca21dd127f.png (raw UUID). Two problems: Google image search loses ranking signals, and the "Whisk" filenames publicly reveal the imagery is AI-generated to anyone who inspects the source.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. METADATA AND SEO -->
+    <section class="section section-cream-2">
+      <div class="container center-head">
+        <p class="eyebrow">04 / Metadata and SEO</p>
+        <h2 class="display-1">The technical SEO foundation isn't set up.</h2>
+        <p class="lead">Four items. Foundational, not visible to visitors.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>ZERO meta descriptions on non-product pages.</h3>
+            <p>Homepage, Our Story, Say Hey / Contact, and Shop have no meta description tag. Google generates search-result snippets from body text, which for pages like /shop/ (currently displaying raw code) results in Google showing shortcode gibberish in search results.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>Robots.txt is essentially empty.</h3>
+            <p>Full contents of socreamalicious.co/robots.txt: "User-Agent: *" followed by "Disallow:" (24 bytes total). No sitemap declaration, no rules for adsbot-google, no disallow of admin/filter-trap URLs. Compare to a well-configured WooCommerce robots.txt: 100+ lines of directives. Yoast SEO or Rank Math can generate a solid default in one click.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>Sitemap.xml exists but has gaps.</h3>
+            <p>WordPress default sitemap indexes pages, posts, products, tags, categories, users. Products in the sitemap: 9. Products last modified: 2026-05-18 (2 months stale). Some navigation-critical pages are underrepresented. Google Search Console likely never got flagged because there's no one monitoring it.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>Broken URL: /find-a-store/ returns 404.</h3>
+            <p>/find-a-store/ is the natural URL a visitor would type expecting to find the store locator. It 404s. The working URL is /store-locator/. Current internal links all point to the working URL, so this is only a broken external-typing scenario, but a simple 301 redirect from /find-a-store/ to /store-locator/ would catch anyone bookmarking or sharing the wrong URL.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. CONTENT STRATEGY -->
+    <section class="section section-cream">
+      <div class="container center-head">
+        <p class="eyebrow">05 / Content strategy across site and social</p>
+        <h2 class="display-1">The story is stronger than the storytelling.</h2>
+        <p class="lead">Five items. Observations across the site and adjacent channels.</p>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>Instagram content is heavily AI-generated with the same broken text failures.</h3>
+            <p>The same AI-generated pint mockups used on the homepage (with visible label failures like "CHEF INBOSPIREB") appear on the brand's Instagram feed as posts. The AI-imagery problem isn't isolated to the site. It's the visual brand across every surface visitors, buyers, and food publications see.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">02</p>
+          <div class="audit-body">
+            <h3>Chef Liz is barely present in the brand's content.</h3>
+            <p>Independent review of the brand's Instagram feed suggests Chef Liz Rogers appears in very few posts. Most video content features other people. The founder is the strongest human asset the brand has, especially given the personal credentials (Emmy sponsor as a Black woman founder in ice cream, Forbes and Oprah features). Right now she's the least visible person in her own brand's content.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">03</p>
+          <div class="audit-body">
+            <h3>Video content is under-produced for the brand's tier.</h3>
+            <p>Colors appear ungraded on promotional videos. Production values are noticeably lower than what Emmy sponsor, Forbes, and Oprah credentials would suggest. For a $9.99 per pint premium product, the visual production should match the price point. Basic color grading and better lighting close most of the gap without requiring bigger budgets.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">04</p>
+          <div class="audit-body">
+            <h3>No blog content strategy tied to the credentials Chef Liz has built.</h3>
+            <p>Creamalicious has been featured in Today Show, Essence, Black Enterprise, Forbes, Oprah, and Emmys. Zero blog posts on the site about any of these features. Someone Googling "Black-owned ice cream brands," "Chef Liz Rogers Creamalicious," "Emmy Awards ice cream sponsor," or "Southern ice cream brands" gets everything except your own site. Six foundational blog posts capture these queries and internally link back to product pages.</p>
+          </div>
+        </article>
+        <article class="audit-item">
+          <p class="audit-num">05</p>
+          <div class="audit-body">
+            <h3>Site structure lacks depth. Only five pages exist.</h3>
+            <p>Navigation currently: Home, Our Story, Say Hey, Shop (broken), Store Locator. Five pages for a brand with real complexity behind it. Compare to Van Leeuwen or Salt & Straw, which have dozens of interlinked pages covering flavors, story, recipes, press, wholesale, careers, sustainability. Each missing page is a missed search opportunity.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. SMALL BUT REAL -->
+    <section class="section section-cream-2">
+      <div class="container center-head">
+        <p class="eyebrow">06 / Small but real</p>
+        <h2 class="display-1">One more.</h2>
+      </div>
+      <div class="audit-list">
+        <article class="audit-item">
+          <p class="audit-num">01</p>
+          <div class="audit-body">
+            <h3>Multiple duplicate email capture experiences on the same page.</h3>
+            <p>Homepage has a popup that appears on load (Save 10%), plus an inline "Stay Connected to the Bliss" form, plus a "Join Our Family" persistent floating CTA, plus a "Holler At Us" form on Contact, plus a "Join The Crew" label used in another form. Multiple problems: inconsistent labeling for the same action, the popup fires before the visitor has any context, and the persistent floating CTAs overlap other content in mobile view. Consolidate to one label, delay the popup by 20+ seconds or 50% scroll, move persistent CTAs so they stop overlapping.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CLOSE -->
+    <section class="section section-forest">
+      <div class="container container-narrow center-head">
+        <p class="eyebrow eyebrow-light">Close</p>
+        <h2 class="display-1 display-light">Twenty-five findings. All fixable inside your current stack.</h2>
+        <p class="body-lg body-light">None of these require rebuilding the platform from scratch. Every one can be handled inside WordPress + WooCommerce + Elementor Pro. Priorities 1 and 2 (critical + infrastructure) are the ones that stop revenue leaking. Priority 3 (content and brand) is the one that starts revenue compounding. All laid out in the ninety-day plan on the main page.</p>
+        <div style="margin-top: 48px;">
+          <a href="index.html" class="btn">← Back to the plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Prepared privately for Chef Liz Rogers.</p>
+      <p>Creamalicious, next scoop. By Jacob Gilliam. July 2026.</p>
+      <p class="footer-fine">All brand imagery, trademarks, and product names are property of Creamalicious / Lumo Ice Cream Company. Used here for private discussion only. Not for public distribution.</p>
+    </footer>
+
+  </main>
+
+  <script src="main.js?v=1"></script>
+</body>
+</html>
