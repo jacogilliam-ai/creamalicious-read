@@ -1007,6 +1007,21 @@ button { font-family: inherit; }
   position: relative;
   border-top: 1px solid rgba(230, 165, 74, 0.16);
 }
+/* Light-background variant for when the platform question sits on cream */
+.platform-col-light {
+  background: rgba(184, 80, 31, 0.06);
+  border-left-color: var(--green);
+}
+.platform-col-light .platform-kicker {
+  color: var(--green);
+}
+.platform-col-light li {
+  color: var(--ink);
+  border-top-color: rgba(184, 80, 31, 0.16);
+}
+.platform-col-light li::before {
+  background: var(--green);
+}
 .platform-col li:first-child {
   border-top: none;
   padding-top: 0;
