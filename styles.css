@@ -1046,7 +1046,21 @@ button { font-family: inherit; }
   }
 }
 
-/* Email preview card (visual mockup) */
+/* Email preview: full designed email as image */
+.email-preview {
+  max-width: 600px;
+  margin: 40px auto 0;
+  padding: 0 24px;
+}
+.email-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(42, 30, 21, 0.15);
+}
+
+/* Legacy CSS mockup card (unused after Figma image replaced it, kept in case) */
 .email-preview-card {
   background: #fff;
   border: 1px solid rgba(184, 80, 31, 0.16);
